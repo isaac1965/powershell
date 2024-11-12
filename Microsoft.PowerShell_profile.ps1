@@ -17,23 +17,6 @@ Set-PSReadLineOption -ViModeIndicator Script -ViModeChangeHandler $Function:OnVi
 # Reasigna la función BackwardDeleteChar a Ctrl+h
 Set-PSReadLineKeyHandler -Chord 'Ctrl+h' -Function BackwardDeleteChar
 
-# Import-Module PSReadLine
-# Set-PSReadLineOption -EditMode Vi
-
-# function OnViModeChange {
-    # if ($args[0] -eq 'Command') {
-        # Set the cursor to a steady block.
-        # Write-Host -NoNewLine "`e[2 q"
-    # } else {
-        # Set the cursor to a thin line.
-        # Write-Host -NoNewLine "`e[6 q"
-    # }
-# }
-# Set-PSReadLineOption -ViModeIndicator Script -ViModeChangeHandler $Function:OnViModeChange
-
-# Llama a la función OnViModeChange para establecer el estado inicial del cursor
-
-
 
 # funcion para salir con 'jj' del modo insert
 $jTimer = [System.Diagnostics.Stopwatch]::StartNew()
